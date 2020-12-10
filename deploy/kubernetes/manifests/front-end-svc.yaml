@@ -11,6 +11,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8079
+    appProtocol: http
     nodePort: 30001
   selector:
     app: front-end

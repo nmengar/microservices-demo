@@ -11,5 +11,6 @@ spec:
     # the port that this service should serve on
   - port: 6379
     targetPort: 6379
+    appProtocol: redis
   selector:
     name: session-db
