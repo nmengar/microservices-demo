@@ -52,6 +52,7 @@ spec:
     # the port that this service should serve on
   - port: 27017
     targetPort: 27017
+    appProtocol: mongo
   selector:
     name: carts-db
 ---
@@ -113,6 +114,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: carts
 ---
@@ -159,6 +161,7 @@ spec:
     # the port that this service should serve on
   - port: 3306
     targetPort: 3306
+    appProtocol: mysql
   selector:
     name: catalogue-db
 ---
@@ -208,6 +211,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: catalogue
 ---
@@ -256,6 +260,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8079
+    appProtocol: http
     nodePort: 30001
   selector:
     name: front-end
@@ -314,6 +319,7 @@ spec:
     # the port that this service should serve on
   - port: 27017
     targetPort: 27017
+    appProtocol: mongo
   selector:
     name: orders-db
 ---
@@ -375,6 +381,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: orders
 ---
@@ -424,6 +431,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: payment
 ---
@@ -466,6 +474,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: queue-master
 ---
@@ -516,6 +525,7 @@ spec:
     # the port that this service should serve on
   - port: 5672
     targetPort: 5672
+    appProtocol: tcp
   selector:
     name: rabbitmq
 ---
@@ -577,6 +587,7 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: shipping
 ---
@@ -634,6 +645,7 @@ spec:
     # the port that this service should serve on
   - port: 27017
     targetPort: 27017
+    appProtocol: mongo
   selector:
     name: user-db
 ---
@@ -686,5 +698,6 @@ spec:
     # the port that this service should serve on
   - port: 80
     targetPort: 80
+    appProtocol: http
   selector:
     name: user
