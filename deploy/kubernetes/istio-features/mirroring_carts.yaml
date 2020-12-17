@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: cart
+spec:
+  hosts:
+    - carts
+  http:
+  - route:
+    - destination:
+        host: carts
+        subset: v1
+      weight: 100
+    mirror:
+      host: carts
+      subset: v2
+    mirror_percent: 100
