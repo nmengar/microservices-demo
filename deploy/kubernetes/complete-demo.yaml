@@ -272,9 +272,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: front-end
+  name: front-end-deployment
   labels:
-    name: front-end
+    app: front-end
   namespace: sock-shop
 spec:
   type: LoadBalancer
@@ -284,7 +284,7 @@ spec:
     appProtocol: http
     nodePort: 30001
   selector:
-    name: front-end
+    app: front-end
 ---
 apiVersion: apps/v1
 kind: Deployment
